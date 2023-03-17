@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.containergpt {
+  position: relative;
+  margin-top: 200px;
+}
+
+.cardgpt {
+  margin-top: 50px;
+}

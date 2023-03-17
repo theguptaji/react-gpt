@@ -26,7 +26,7 @@ app.post("/chat", async (req, res) => {
         const response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: prompt,
-            max_tokens: 100,
+            max_tokens: 200,
             temperature: 0,
             stream: true,
         }, { responseType: 'stream' });
