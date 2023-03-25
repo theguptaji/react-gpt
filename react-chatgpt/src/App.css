@@ -45,3 +45,13 @@
 .cardgpt {
   margin-top: 50px;
 }
+
+.testimonial-group-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.testimonial-group-col {
+  flex: 0 0 auto;
+}

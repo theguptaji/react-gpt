@@ -2,11 +2,14 @@ import './App.css';
 import axios from "axios";
 import {useState} from "react";
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Card from 'react-bootstrap/Card';
+import MyCard from './components/MyCard';
+
 
 function App() {
   const [prompt, setPrompt] = useState("");
@@ -19,12 +22,13 @@ function App() {
     axios
       .post("http://localhost:8080/chat", { prompt })
       .then((res) => {
-        // Update the response state with the server's response
         setResponse(res.data);
       })
       .catch((err) => {
         console.error(err);
       });
+
+    // TODO: Add a modal card in a bottom array with question and answer
   };
 
   return (
@@ -50,11 +54,22 @@ function App() {
             Submit
           </Button>
       </Form>
-      <Card className='cardgpt'>
-      <Card.Body>{response}.</Card.Body>
-      </Card>
+      
       
     </Container>   
+    <Container>
+    <MyCard response={response} question={prompt}/>
+    </Container>
+    <Container class="overflow-scroll">
+    <Row className='testimonial-group-row'>
+        <Col className='testimonial-group-col'><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+        <Col className='testimonial-group-col'><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+        <Col className='testimonial-group-col'><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+        <Col className='testimonial-group-col'><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+        <Col className='testimonial-group-col'><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+        <Col className='testimonial-group-col'><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+    </Row>
+    </Container>
     </div>
   );
 }
