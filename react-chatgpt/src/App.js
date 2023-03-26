@@ -64,7 +64,7 @@ function App() {
     <Container>
     <MyCard color={color} response={response} question={"Answer"}/>
     </Container>
-    <Container style={{marginTop: "50px"}}><h1>History</h1></Container>  
+    <Container style={{marginTop: "50px", color: "white"}}><h1>History</h1></Container>  
     <Container className='scrollableX'>
       <Row className='scrollableRow'>
           {cardArray.map(item => <Col><MyCard response={item.answer} question={item.question}/></Col>)}
