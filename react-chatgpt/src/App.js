@@ -14,6 +14,8 @@ import MyCard from './components/MyCard';
 function App() {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
+  const [color, setcolor] = useState("light");
+  const [cardArray, setcardArray] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +25,8 @@ function App() {
       .post("http://localhost:8080/chat", { prompt })
       .then((res) => {
         setResponse(res.data);
+        setcolor("green");
+        setcardArray([...cardArray, {question: prompt, answer: res.data}]);
       })
       .catch((err) => {
         console.error(err);
@@ -58,16 +62,12 @@ function App() {
       
     </Container>   
     <Container>
-    <MyCard response={response} question={prompt}/>
+    <MyCard color={color} response={response} question={"Answer"}/>
     </Container>
+    <Container style={{marginTop: "50px"}}><h1>History</h1></Container>  
     <Container className='scrollableX'>
       <Row className='scrollableRow'>
-          <Col><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
-          <Col><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
-          <Col><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
-          <Col><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
-          <Col><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
-          <Col><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+          {cardArray.map(item => <Col><MyCard response={item.answer} question={item.question}/></Col>)}
       </Row>
     </Container>
     </div>

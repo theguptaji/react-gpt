@@ -1,13 +1,13 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 
-export default function MyCard({response, question}) {
+export default function MyCard({color,response, question}) {
   return (
     <>
     <Card
-          bg={'light'}
-          key={'light'}
-          text={'dark'}
+          bg={color==="green"?'success':'light'}
+          key={color==="green"?'success':'light'}
+          text={color==="green"?'light':'dark'}
           style={{ width: '25rem' }}
           className="mb-2 cardgpt"
         >
