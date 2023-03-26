@@ -60,15 +60,15 @@ function App() {
     <Container>
     <MyCard response={response} question={prompt}/>
     </Container>
-    <Container class="overflow-scroll">
-    <Row className='testimonial-group-row'>
-        <Col className='testimonial-group-col'><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
-        <Col className='testimonial-group-col'><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
-        <Col className='testimonial-group-col'><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
-        <Col className='testimonial-group-col'><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
-        <Col className='testimonial-group-col'><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
-        <Col className='testimonial-group-col'><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
-    </Row>
+    <Container className='scrollableX'>
+      <Row className='scrollableRow'>
+          <Col><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+          <Col><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+          <Col><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+          <Col><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+          <Col><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+          <Col><MyCard response={"I am a response"} question={"I am a question?"}/></Col>
+      </Row>
     </Container>
     </div>
   );
