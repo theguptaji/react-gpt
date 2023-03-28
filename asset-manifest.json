@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.e2dd2d40.css",
-    "main.js": "/static/js/main.842f99e8.js",
-    "index.html": "/index.html",
-    "main.e2dd2d40.css.map": "/static/css/main.e2dd2d40.css.map",
-    "main.842f99e8.js.map": "/static/js/main.842f99e8.js.map"
+    "main.css": "/react-gpt/static/css/main.e2dd2d40.css",
+    "main.js": "/react-gpt/static/js/main.842f99e8.js",
+    "index.html": "/react-gpt/index.html",
+    "main.e2dd2d40.css.map": "/react-gpt/static/css/main.e2dd2d40.css.map",
+    "main.842f99e8.js.map": "/react-gpt/static/js/main.842f99e8.js.map"
   },
   "entrypoints": [
     "static/css/main.e2dd2d40.css",
