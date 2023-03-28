@@ -12,10 +12,10 @@ import MyCard from './components/MyCard';
 
 
 function App() {
-  const [prompt, setPrompt] = useState("");
+  const [prompt, setPrompt] = useState("Type your question here?");
   const [response, setResponse] = useState("");
   const [color, setcolor] = useState("light");
-  const [cardArray, setcardArray] = useState([]);
+  const [cardArray, setcardArray] = useState([{question: "Question asked previously?", answer: "Response of this question"}]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
