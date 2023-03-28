@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/theguptaji/react-gpt/issues"
   },
-  "homepage": "https://github.com/theguptaji/react-gpt#readme",
+  "homepage": "https://theguptaji.github.io/react-gpt",
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
